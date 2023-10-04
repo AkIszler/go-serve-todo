@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="../../static/style.css">
+	<title>GoServerTodo</title>
+</head>
+<body>
+	<div class="container">
+	<h1>{{ .Title }}</h1>	
+
+	<ul>
+		{{ range.Todo }}
+			{{ if .Done }}
+				<li class="done">{{.Item }}</li>
+			{{ else }}
+				<li>{{.Item }}</li>
+			{{ end }}
+		{{ end }}	
+	</ul>
+ <button class="add">Add</button>
+ <button class="clear">Clear</button>
+	</div>
+
+	<script src="../static/index.js"></script>
+
+</body>
+</html>
